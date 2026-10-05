@@ -1,0 +1,19 @@
+# Core
+pandas>=2.0
+numpy>=1.24
+openpyxl>=3.1         # for the small Excel outputs (top-N shortlists) and .xlsx training files
+
+# Big-data I/O -- this is the one addition vs. the simple/ pipeline
+pyarrow>=14.0          # Parquet read/write, used for every large intermediate/result file
+
+# Cheminformatics
+rdkit>=2023.9.1        # pip install works on Windows/macOS/Linux for Python 3.8+;
+                       # if pip gives you trouble, `conda install -c conda-forge rdkit` is the fallback
+
+# Machine learning
+scikit-learn>=1.3
+xgboost>=1.7           # 1.7+ needed for reg:quantileerror (quantile regression uncertainty)
+
+# Stats & plotting
+scipy>=1.10
+matplotlib>=3.7
